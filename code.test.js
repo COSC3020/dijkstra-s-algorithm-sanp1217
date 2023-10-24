@@ -19,7 +19,7 @@ var graphShortestPath = {
     'toot': 6
 };
 
-assert(JSON.stringify(dijkstra(graph) == JSON.stringify(graphShortestPath)));
+assert(JSON.stringify(dijkstra(graph, 'foo') == JSON.stringify(graphShortestPath)));
 
 var graph1 = {
     'A': { 'B': 2, 'D': 4, 'C': 1 },
@@ -43,4 +43,4 @@ var graph1ShortestPath = {
     'G': 9,
     'H': 14
 };
-assert(JSON.stringify(dijkstra(graph1) == JSON.stringify(graph1ShortestPath)));
+assert(JSON.stringify(dijkstra(graph1, 'C') == JSON.stringify(graph1ShortestPath)));
